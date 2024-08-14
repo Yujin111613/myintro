@@ -77,6 +77,14 @@
             margin: 0;
             font-size: 0.9em;
         }
+
+        .profile-photo {
+            border-radius: 50%; /* 원형으로 만들기 */
+            width: 150px; /* 사진 크기 조정 */
+            height: 150px; /* 사진 크기 조정 */
+            object-fit: cover; /* 이미지 크기에 맞게 자르기 */
+            margin: 20px 0; /* 위아래 여백 */
+        }
     </style>
     <script>
         function showSection(sectionId) {
@@ -100,8 +108,12 @@
     </nav>
 
     <section id="intro" class="active">
+        <img src="images/images.jfif" alt="나의 사진" class="profile-photo">
         <p class="intro-text">
             저는 <span class="highlight">이유진</span>입니다. 이 페이지를 통해 저에 대해 조금 더 알아가실 수 있으면 좋겠습니다.
+        </p>
+        <p class="intro-text">
+            제 블로그를 방문해보세요: <a href="https://blog.naver.com/1y_11j" target="_blank" class="highlight">나의 블로그</a>
         </p>
     </section>
 
