@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 소개 페이지</title>
+    <style>
+        body {
+            background-color: #FFD6E7; /* 더 밝은 연분홍 색상 배경 */
+            font-family: 'Comic Sans MS', 'Arial', sans-serif; /* 귀여운 느낌의 폰트 */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #FFEBF5; /* 더 밝은 연분홍 색상 */
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #FF69B4;
+            font-size: 1.2em;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+
+        section {
+            display: none;
+            padding: 40px 20px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .intro-text {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .highlight {
+            color: #FF69B4; /* 핫핑크로 강조 */
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #FFEBF5; /* 더 밝은 연분홍 색상 */
+            padding: 10px;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            // 모든 섹션을 숨기기
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            // 선택된 섹션만 표시
+            var activeSection = document.getElementById(sectionId);
+            activeSection.classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>안녕하세요!</h1>
+    </header>
+
+    <nav>
+        <a onclick="showSection('intro')">나의 소개</a>
+        <a onclick="showSection('hobby')">나의 취미</a>
+    </nav>
+
+    <section id="intro" class="active">
+        <p class="intro-text">
+            저는 <span class="highlight">이유진</span>입니다. 이 페이지를 통해 저에 대해 조금 더 알아가실 수 있으면 좋겠습니다.
+        </p>
+    </section>
+
+    <section id="hobby">
+        <p class="intro-text">
+            저는 <span class="highlight">짱구</span>을(를) 좋아하고, <span class="highlight">특별한 매력</span>을(를) 가지고 있습니다. 만나 뵙게 되어 정말 기쁩니다!
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2024 나의 소개 페이지. All rights reserved.</p>
+    </footer>
+</body>
+</html>
