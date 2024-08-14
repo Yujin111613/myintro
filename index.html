@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 소개 페이지</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             background-color: #FFD6E7; /* 더 밝은 연분홍 색상 배경 */
@@ -35,6 +36,13 @@
             font-size: 1.2em;
             margin: 0 15px;
             cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        nav i {
+            color: #FF69B4; /* 핫핑크 색상 */
+            margin: 0 5px;
         }
 
         section {
@@ -72,13 +80,10 @@
     </style>
     <script>
         function showSection(sectionId) {
-            // 모든 섹션을 숨기기
             var sections = document.querySelectorAll('section');
             sections.forEach(function(section) {
                 section.classList.remove('active');
             });
-
-            // 선택된 섹션만 표시
             var activeSection = document.getElementById(sectionId);
             activeSection.classList.add('active');
         }
@@ -90,8 +95,8 @@
     </header>
 
     <nav>
-        <a onclick="showSection('intro')">나의 소개</a>
-        <a onclick="showSection('hobby')">나의 취미</a>
+        <a onclick="showSection('intro')"><i class="fas fa-heart"></i> 나의 소개 <i class="fas fa-heart"></i></a>
+        <a onclick="showSection('hobby')"><i class="fas fa-heart"></i> 나의 취미 <i class="fas fa-heart"></i></a>
     </nav>
 
     <section id="intro" class="active">
@@ -102,7 +107,7 @@
 
     <section id="hobby">
         <p class="intro-text">
-            저는 <span class="highlight">짱구</span>을(를) 좋아하고, <span class="highlight">특별한 매력</span>을(를) 가지고 있습니다. 만나 뵙게 되어 정말 기쁩니다!
+            저는 <span class="highlight">짱구</span>를 좋아하고, <span class="highlight">특별한 매력</span>을 가지고 있습니다. 만나 뵙게 되어 정말 기쁩니다!
         </p>
     </section>
 
